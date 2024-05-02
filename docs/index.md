@@ -15,28 +15,24 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files. -->
----
-description: Quick lil guide on deploying CIPP to your Microsoft tenant
----
-
 # ✅ CIPP installation (As of April 30, 2024)
 
-### Prerequisites
+## Prerequisites
 
 * A GitHub account
 * A Microsoft 365 tenant
 * 30 minutes, roughly
 
-### Getting Started
+## Getting Started
 
 1. Ensuring that you're logged into GitHub, navigate to the two following pages and fork both to repositories that retain the original name.
 
 * [https://github.com/KelvinTegelaar/CIPP](https://github.com/KelvinTegelaar/CIPP)
 * [https://github.com/KelvinTegelaar/CIPP-API](https://github.com/KelvinTegelaar/CIPP-API)
 
-{% hint style="info" %}
-To Fork a GitHub repo, in the top right, click on the **Fork** button
-{% endhint %}
+!!! info ""
+
+  To Fork a GitHub repo, in the top right, click on the **Fork** button
 
 2. Again, ensure that the **Repository name** field matches the originals (CIPP and CIPP-API, respectively). Keep the box for `Copy the master branch only` checked, then click `Create Fork`
 3. Create a Token in GitHub. This will allow you to link the repo to your Azure, and allow the automation to work seamlessly :tm:
@@ -49,7 +45,7 @@ To Fork a GitHub repo, in the top right, click on the **Fork** button
       ![](<.gitbook/assets/image (4).png>)
    7. If all looks good, click on **Generate token** at the bottom of the page. Document the token value in a secure location.
 
-### Deploy the Static Web App
+## Deploy the Static Web App
 
 1. Ensuring you're logged into a Microsoft 365 account with access to both an active **Azure Subscription** and an **Azure Resource Group,** proceed to the following link:\
    [https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fdev%2Fdeployment%2FAzureDeploymentTemplate.json](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fdev%2Fdeployment%2FAzureDeploymentTemplate.json)
@@ -75,7 +71,7 @@ To Fork a GitHub repo, in the top right, click on the **Fork** button
 9. Under **Settings** on the left pane, navigate to **Role management**.
 10. Select **Invite User**, then input your user's Email Address, and input `admin` as the role. Generate the invitation link, and head on in. **Grant Consent** when requested, and you should be redirected to your new CIPP instance.
 
-### Post Install configuration
+## Post Install configuration
 
 1. Repeat the invitation process for any other technicians that you are inviting for your testing phase of CIPP, or other IT team members if deploying for an internal organization.
 2. From your Azure page, navigate back to the main Resource Group, and click into your **Function app**.
@@ -91,15 +87,15 @@ To Fork a GitHub repo, in the top right, click on the **Fork** button
 12. Check the pickbox to select all clients, then choose the option to perform a CPV refresh. This will consent them to your SAM application.
 13. Enjoy!
 
-### Automatic Updates
+## Automatic Updates
 
 1. Browse to [https://github.com/apps/pull](https://github.com/apps/pull) and click "install".
 2. Choose the organization (if applicable), then **Only select repositories**, and choose both your CIPP and CIPP-API. Click **Install**
 3. Navigate to your **CIPP** repository on GitHub, then browse to the folder `.Github\Workflows`. Locate the file named `AZURE_STATIC_WEB_APPS_API_TOKEN_<WORD>_<WORD>_<UUID>.yml`
 4. Open this file, then click the Edit icon in the rop right. Around the 7th line, there will be a code block like such:
 
-```
-pull_requst:
+```yml
+pull_request:
   types: [opened, synchronize, reopened, closed]
   branches:
     - main
@@ -118,6 +114,6 @@ pull_requst:
   * Configuring CIPP to function on your own tenant
 * Grab screenshots of the autoupdate configuration.
 
-{% hint style="info" %}
-Please be smart and set up a separate CIPP tenant if you intend to manage your parent tenant.
-{% endhint %}
+!!! danger "Warning"
+
+  Please be smart and set up a separate CIPP tenant if you intend to manage your parent tenant.
