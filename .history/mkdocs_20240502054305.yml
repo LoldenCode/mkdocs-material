@@ -1,0 +1,38 @@
+site_name: Lolden's Knowledge Base
+site_url: https://docs.lolden.xyz
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigate.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/loldencode
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alden-wilson-158414106/
+
+copyright: |
+  &copy; `r format(Sys.time(), "%Y")` <a href="https://github.com/LoldenCode" target="_blank" rel="noopener">Alden Wilson</a>
