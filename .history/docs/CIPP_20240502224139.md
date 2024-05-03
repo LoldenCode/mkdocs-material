@@ -1,0 +1,100 @@
+# ✅ CIPP installation (As of April 30, 2024)
+
+## Prerequisites
+
+* A GitHub account
+* A Microsoft 365 tenant
+* 30 minutes, roughly
+
+## Getting Started
+
+1. Ensuring that you're logged into GitHub, navigate to the two following pages and fork both to repositories that retain the original name.
+
+* [https://github.com/KelvinTegelaar/CIPP](https://github.com/KelvinTegelaar/CIPP)
+* [https://github.com/KelvinTegelaar/CIPP-API](https://github.com/KelvinTegelaar/CIPP-API)
+
+!!! info ""
+  To Fork a GitHub repo, in the top right, click on the **Fork** button
+
+2. Again, ensure that the **Repository name** field matches the originals (CIPP and CIPP-API, respectively). Keep the box for `Copy the master branch only` checked, then click `Create Fork`
+3. Create a Token in GitHub. This will allow you to link the repo to your Azure, and allow the automation to work seamlessly :tm:
+   1. Click on your user icon in the top right.
+   2. Navigate to **Settings**
+   3. Navigate to **Developer Settings**
+   4. Expand **Personal Access Tokens** then choose **Tokens (classic)**
+   5. Click **Generate new token > Generate new token (classic)**
+   6. Name your new token something memorable, then check the permissions for **repo**, **workflow**, and **write:packages**. You should have a result similar to this (note that repo has unchecked itself, because...programming or something):\
+      ![](<.gitbook/assets/image (4).png>)
+   7. If all looks good, click on **Generate token** at the bottom of the page. Document the token value in a secure location.
+
+## Deploy the Static Web App
+
+1. Ensuring you're logged into a Microsoft 365 account with access to both an active **Azure Subscription** and an **Azure Resource Group,** proceed to the following link:\
+   [https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fdev%2Fdeployment%2FAzureDeploymentTemplate.json](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fdev%2Fdeployment%2FAzureDeploymentTemplate.json)
+2. Select your Subscription and Resource Group.&#x20;
+   1. While not necessary, I prefer to have a separate Resource Group for CIPP.
+3. Select the nearest region that supports **Static Web Apps** (SWA's). As of time of writing, these are the supported options:\
+   \* Central US\
+   \* East US 2\
+   \* East Asia\
+   \* West Europe\
+   \* West US 2
+4. Update the Github Repository, GitHub Token, and GitHub API Repository with details that reflect your environment. You should end up with a page looking similar to this:\
+   ![](<.gitbook/assets/image (5).png>)
+5. Click **Review + create** at the bottom. Confirm all looks good on the Review page, click Okay.
+6. You should be at your deployment page now:\
+   ![](<.gitbook/assets/image (6).png>)\
+   At this point, wait until the blue bar beneath the bell in the top right finishes doing nerdy stuff. Grab yourself a tea or something, the hard part is over.
+7. Once back from your tea break, you should be shown a screen as follows:\
+   ![](.gitbook/assets/image.png)
+8. Click on the **Resource Group,** then navigate to your **Static Web App**\
+   \
+   ![](<.gitbook/assets/image (2).png>)
+9. Under **Settings** on the left pane, navigate to **Role management**.
+10. Select **Invite User**, then input your user's Email Address, and input `admin` as the role. Generate the invitation link, and head on in. **Grant Consent** when requested, and you should be redirected to your new CIPP instance.
+
+## Post Install configuration
+
+1. Repeat the invitation process for any other technicians that you are inviting for your testing phase of CIPP, or other IT team members if deploying for an internal organization.
+2. From your Azure page, navigate back to the main Resource Group, and click into your **Function app**.
+3. Navigate to **Functions > Settings > Configuration**.
+4. Add a **New application setting** at the top of this page, named `WEBSITE_RUN_FROM_PACKAGE` with a value of `1`. Click ok, then Save at the top of the prior page.
+5. Navigate to **Functions > Deployment > Deployment Center**
+6. Under the source **External git**, click **Disconnect then confirm.**
+7. The page should refresh, with a required field for **Source.** Choose Github, then click **Authorize**.
+8. Select the Organization, Repo, and Branch that reflect your Fork of **CIPP-API.** Scroll down, ensuring that **Add a workflow** and **Basic authentication** are checked. Finally, click **Save** at the top.
+9. Navigate to the main Overview page of the function app, then click on **Restart** in the top pane to f finalize the changes.
+10. Follow the steps [https://docs.cipp.app/setup/installation/samwizard](https://docs.cipp.app/setup/installation/samwizard) to create the SAM for your clients, or wait for me to write the rest of this.
+11. After building your SAM, and having your GDAP relationships set up, navigate to **SETTINGS > CIPP > Application Settings > Tenants**
+12. Check the pickbox to select all clients, then choose the option to perform a CPV refresh. This will consent them to your SAM application.
+13. Enjoy!
+
+## Automatic Updates
+
+1. Browse to [https://github.com/apps/pull](https://github.com/apps/pull) and click "install".
+2. Choose the organization (if applicable), then **Only select repositories**, and choose both your CIPP and CIPP-API. Click **Install**
+3. Navigate to your **CIPP** repository on GitHub, then browse to the folder `.Github\Workflows`. Locate the file named `AZURE_STATIC_WEB_APPS_API_TOKEN_<WORD>_<WORD>_<UUID>.yml`
+4. Open this file, then click the Edit icon in the rop right. Around the 7th line, there will be a code block like such:
+
+```yml
+pull_request:
+  types: [opened, synchronize, reopened, closed]
+  branches:
+    - main
+```
+
+5. Remove these lines, then click **Commit changes...** in the top right. Leave everything in the popup window as it is, with the radio button on **Commit directly to the \`main\` branch** selected. Click on **Commit changes.**
+6. Wait for the next release of CIPP (Typically every other Friday, but there are some dev sprints that run a little longer). CIPP will warn you of an update, so log back into your GitHub and go to your CIPP repo.
+7. Click on **Sync fork**, then **Update Branch**
+   1. NOTE: DO NOT CHOOSE THE "Do you want to Discard # Commits"
+8. On your GitHub page, you will have a new Pull Request. Click on the "Run Workflow" button, then "Merge". Moving forward, your repo will automatically update
+
+### Todo
+
+* Document the next two possible pathways:
+  * Setting up the SAM service account
+  * Configuring CIPP to function on your own tenant
+* Grab screenshots of the autoupdate configuration.
+
+!!! danger "Warning"
+  Please be smart and set up a separate CIPP tenant if you intend to manage your parent tenant.
