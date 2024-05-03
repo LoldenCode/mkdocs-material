@@ -14,7 +14,7 @@
 * [https://github.com/KelvinTegelaar/CIPP-API](https://github.com/KelvinTegelaar/CIPP-API)
 
 !!! info ""
-  To Fork a GitHub repo, in the top right, click on the **Fork** button
+    To Fork a GitHub repo, in the top right, click on the **Fork** button
 
 2. Again, ensure that the **Repository name** field matches the originals (CIPP and CIPP-API, respectively). Keep the box for `Copy the master branch only` checked, then click `Create Fork`
 3. Create a Token in GitHub. This will allow you to link the repo to your Azure, and allow the automation to work seamlessly :tm:
@@ -23,7 +23,7 @@
    3. Navigate to **Developer Settings**
    4. Expand **Personal Access Tokens** then choose **Tokens (classic)**
    5. Click **Generate new token > Generate new token (classic)**
-   6. Name your new token something memorable, then check the permissions for **repo**, **workflow**, and **write:packages**. You should have a result similar to this (note that repo has unchecked itself, because...programming or something):\
+   6. Name your new token something memorable, then check the permissions for **repo**, **workflow**, and **write:packages**. You should have a result similar to this (note that repo has unchecked itself, because...programming or something):
       ![](<.gitbook/assets/image (4).png>)
    7. If all looks good, click on **Generate token** at the bottom of the page. Document the token value in a secure location.
 
@@ -34,21 +34,20 @@
 2. Select your Subscription and Resource Group.&#x20;
    1. While not necessary, I prefer to have a separate Resource Group for CIPP.
 3. Select the nearest region that supports **Static Web Apps** (SWA's). As of time of writing, these are the supported options:\
-   \* Central US\
-   \* East US 2\
-   \* East Asia\
-   \* West Europe\
-   \* West US 2
+   * Central US
+   * East US 2
+   * East Asia
+   * West Europe
+   * West US 2
 4. Update the Github Repository, GitHub Token, and GitHub API Repository with details that reflect your environment. You should end up with a page looking similar to this:\
    ![](<.gitbook/assets/image (5).png>)
 5. Click **Review + create** at the bottom. Confirm all looks good on the Review page, click Okay.
-6. You should be at your deployment page now:\
-   ![](<.gitbook/assets/image (6).png>)\
+6. You should be at your deployment page now:
+   ![](<.gitbook/assets/image (6).png>)
    At this point, wait until the blue bar beneath the bell in the top right finishes doing nerdy stuff. Grab yourself a tea or something, the hard part is over.
-7. Once back from your tea break, you should be shown a screen as follows:\
+7. Once back from your tea break, you should be shown a screen as follows:
    ![](.gitbook/assets/image.png)
-8. Click on the **Resource Group,** then navigate to your **Static Web App**\
-   \
+8. Click on the **Resource Group,** then navigate to your **Static Web App**
    ![](<.gitbook/assets/image (2).png>)
 9. Under **Settings** on the left pane, navigate to **Role management**.
 10. Select **Invite User**, then input your user's Email Address, and input `admin` as the role. Generate the invitation link, and head on in. **Grant Consent** when requested, and you should be redirected to your new CIPP instance.
@@ -76,7 +75,7 @@
 3. Navigate to your **CIPP** repository on GitHub, then browse to the folder `.Github\Workflows`. Locate the file named `AZURE_STATIC_WEB_APPS_API_TOKEN_<WORD>_<WORD>_<UUID>.yml`
 4. Open this file, then click the Edit icon in the rop right. Around the 7th line, there will be a code block like such:
 
-```yml
+``` yml
 pull_request:
   types: [opened, synchronize, reopened, closed]
   branches:
@@ -97,4 +96,4 @@ pull_request:
 * Grab screenshots of the autoupdate configuration.
 
 !!! danger "Warning"
-  Please be smart and set up a separate CIPP tenant if you intend to manage your parent tenant.
+    Please be smart and set up a separate CIPP tenant if you intend to manage your parent tenant.
