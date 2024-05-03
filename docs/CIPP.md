@@ -8,7 +8,7 @@
 
 ## Getting Started
 
-1. Ensuring that you're logged into GitHub, navigate to the two following pages and fork both to repositories that retain the original name.
+1. Ensuring that you're logged into GitHub, navigate to the two following pages and fork both to repositories that retain the original name. 
 
 * [https://github.com/KelvinTegelaar/CIPP](https://github.com/KelvinTegelaar/CIPP)
 * [https://github.com/KelvinTegelaar/CIPP-API](https://github.com/KelvinTegelaar/CIPP-API)
