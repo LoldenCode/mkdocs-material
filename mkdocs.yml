@@ -1,9 +1,9 @@
-site_name: Lolden\'s Knowledge Base
+site_name: Lolden's Knowledge Base
 site_url: https://docs.lolden.xyz
 theme:
   name: material
   features:
-    #- navigation.tabs
+    - navigation.tabs
     - navigation.sections
     - toc.integrate
     - navigate.top
