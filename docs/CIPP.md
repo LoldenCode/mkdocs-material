@@ -24,7 +24,7 @@
    4. Expand **Personal Access Tokens** then choose **Tokens (classic)**
    5. Click **Generate new token > Generate new token (classic)**
    6. Name your new token something memorable, then check the permissions for **repo**, **workflow**, and **write:packages**. You should have a result similar to this (note that repo has unchecked itself, because...programming or something):
-      ![](<.gitbook/assets/image (4).png>)
+      ![](<https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (4).png>)
    7. If all looks good, click on **Generate token** at the bottom of the page. Document the token value in a secure location.
 
 ## Deploy the Static Web App
@@ -40,15 +40,15 @@
    * West Europe
    * West US 2
 4. Update the Github Repository, GitHub Token, and GitHub API Repository with details that reflect your environment. You should end up with a page looking similar to this:\
-   ![](<.gitbook/assets/image (5).png>)
+   ![](<https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (5).png>)
 5. Click **Review + create** at the bottom. Confirm all looks good on the Review page, click Okay.
 6. You should be at your deployment page now:
-   ![](<.gitbook/assets/image (6).png>)
+   ![](<https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (6).png>)
    At this point, wait until the blue bar beneath the bell in the top right finishes doing nerdy stuff. Grab yourself a tea or something, the hard part is over.
 7. Once back from your tea break, you should be shown a screen as follows:
-   ![](.gitbook/assets/image.png)
+   ![](https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image.png)
 8. Click on the **Resource Group,** then navigate to your **Static Web App**
-   ![](<.gitbook/assets/image (2).png>)
+   ![](<https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (2).png>)
 9. Under **Settings** on the left pane, navigate to **Role management**.
 10. Select **Invite User**, then input your user's Email Address, and input `admin` as the role. Generate the invitation link, and head on in. **Grant Consent** when requested, and you should be redirected to your new CIPP instance.
 
