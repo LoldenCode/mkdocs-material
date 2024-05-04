@@ -1,0 +1,660 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.lolden.xyz/CIPP/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Rewst/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>✅ CIPP installation (As of April 30, 2024) - Lolden's Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cipp-installation-as-of-april-30-2024" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Lolden&#39;s Knowledge Base" class="md-header__button md-logo" aria-label="Lolden's Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lolden's Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ✅ CIPP installation (As of April 30, 2024)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Hello, World
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  ✅ CIPP installation (As of April 30, 2024)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Rewst/" class="md-tabs__link">
+        
+  
+    
+  
+  Page 2
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lolden&#39;s Knowledge Base" class="md-nav__button md-logo" aria-label="Lolden's Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Lolden's Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello, World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ✅ CIPP installation (As of April 30, 2024)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ✅ CIPP installation (As of April 30, 2024)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-static-web-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy the Static Web App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-install-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Install configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatic Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Todo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rewst/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Page 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cipp-installation-as-of-april-30-2024">✅ CIPP installation (As of April 30, 2024)</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A GitHub account</li>
+<li>A Microsoft 365 tenant</li>
+<li>30 minutes, roughly</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>
+<p>Ensuring that you're logged into GitHub, navigate to the two following pages and fork both to repositories that retain the original name. </p>
+</li>
+<li>
+<p><a href="https://github.com/KelvinTegelaar/CIPP">https://github.com/KelvinTegelaar/CIPP</a></p>
+</li>
+<li><a href="https://github.com/KelvinTegelaar/CIPP-API">https://github.com/KelvinTegelaar/CIPP-API</a></li>
+</ol>
+<div class="admonition info">
+<p>To Fork a GitHub repo, in the top right, click on the <strong>Fork</strong> button</p>
+</div>
+<ol>
+<li>Again, ensure that the <strong>Repository name</strong> field matches the originals (CIPP and CIPP-API, respectively). Keep the box for <code>Copy the master branch only</code> checked, then click <code>Create Fork</code></li>
+<li>Create a Token in GitHub. This will allow you to link the repo to your Azure, and allow the automation to work seamlessly <img alt="™" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2122.svg" title=":tm:" /></li>
+<li>Click on your user icon in the top right.</li>
+<li>Navigate to <strong>Settings</strong></li>
+<li>Navigate to <strong>Developer Settings</strong></li>
+<li>Expand <strong>Personal Access Tokens</strong> then choose <strong>Tokens (classic)</strong></li>
+<li>Click <strong>Generate new token &gt; Generate new token (classic)</strong></li>
+<li>Name your new token something memorable, then check the permissions for <strong>repo</strong>, <strong>workflow</strong>, and <strong>write:packages</strong>. You should have a result similar to this (note that repo has unchecked itself, because...programming or something):
+      <img alt="" src="https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (4).png" /></li>
+<li>If all looks good, click on <strong>Generate token</strong> at the bottom of the page. Document the token value in a secure location.</li>
+</ol>
+<h2 id="deploy-the-static-web-app">Deploy the Static Web App</h2>
+<ol>
+<li>Ensuring you're logged into a Microsoft 365 account with access to both an active <strong>Azure Subscription</strong> and an <strong>Azure Resource Group,</strong> proceed to the following link:\
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fdev%2Fdeployment%2FAzureDeploymentTemplate.json">https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fdev%2Fdeployment%2FAzureDeploymentTemplate.json</a></li>
+<li>Select your Subscription and Resource Group.&#x20;</li>
+<li>While not necessary, I prefer to have a separate Resource Group for CIPP.</li>
+<li>Select the nearest region that supports <strong>Static Web Apps</strong> (SWA's). As of time of writing, these are the supported options:\</li>
+<li>Central US</li>
+<li>East US 2</li>
+<li>East Asia</li>
+<li>West Europe</li>
+<li>West US 2</li>
+<li>Update the Github Repository, GitHub Token, and GitHub API Repository with details that reflect your environment. You should end up with a page looking similar to this:\
+   <img alt="" src="https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (5).png" /></li>
+<li>Click <strong>Review + create</strong> at the bottom. Confirm all looks good on the Review page, click Okay.</li>
+<li>You should be at your deployment page now:
+   <img alt="" src="https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (6).png" />
+   At this point, wait until the blue bar beneath the bell in the top right finishes doing nerdy stuff. Grab yourself a tea or something, the hard part is over.</li>
+<li>Once back from your tea break, you should be shown a screen as follows:
+   <img alt="" src="https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image.png" /></li>
+<li>Click on the <strong>Resource Group,</strong> then navigate to your <strong>Static Web App</strong>
+   <img alt="" src="https://raw.githubusercontent.com/LoldenCode/mkdocs-material/main/docs/.gitbook/assets/image (2).png" /></li>
+<li>Under <strong>Settings</strong> on the left pane, navigate to <strong>Role management</strong>.</li>
+<li>Select <strong>Invite User</strong>, then input your user's Email Address, and input <code>admin</code> as the role. Generate the invitation link, and head on in. <strong>Grant Consent</strong> when requested, and you should be redirected to your new CIPP instance.</li>
+</ol>
+<h2 id="post-install-configuration">Post Install configuration</h2>
+<ol>
+<li>Repeat the invitation process for any other technicians that you are inviting for your testing phase of CIPP, or other IT team members if deploying for an internal organization.</li>
+<li>From your Azure page, navigate back to the main Resource Group, and click into your <strong>Function app</strong>.</li>
+<li>Navigate to <strong>Functions &gt; Settings &gt; Configuration</strong>.</li>
+<li>Add a <strong>New application setting</strong> at the top of this page, named <code>WEBSITE_RUN_FROM_PACKAGE</code> with a value of <code>1</code>. Click ok, then Save at the top of the prior page.</li>
+<li>Navigate to <strong>Functions &gt; Deployment &gt; Deployment Center</strong></li>
+<li>Under the source <strong>External git</strong>, click <strong>Disconnect then confirm.</strong></li>
+<li>The page should refresh, with a required field for <strong>Source.</strong> Choose Github, then click <strong>Authorize</strong>.</li>
+<li>Select the Organization, Repo, and Branch that reflect your Fork of <strong>CIPP-API.</strong> Scroll down, ensuring that <strong>Add a workflow</strong> and <strong>Basic authentication</strong> are checked. Finally, click <strong>Save</strong> at the top.</li>
+<li>Navigate to the main Overview page of the function app, then click on <strong>Restart</strong> in the top pane to f finalize the changes.</li>
+<li>Follow the steps <a href="https://docs.cipp.app/setup/installation/samwizard">https://docs.cipp.app/setup/installation/samwizard</a> to create the SAM for your clients, or wait for me to write the rest of this.</li>
+<li>After building your SAM, and having your GDAP relationships set up, navigate to <strong>SETTINGS &gt; CIPP &gt; Application Settings &gt; Tenants</strong></li>
+<li>Check the pickbox to select all clients, then choose the option to perform a CPV refresh. This will consent them to your SAM application.</li>
+<li>Enjoy!</li>
+</ol>
+<h2 id="automatic-updates">Automatic Updates</h2>
+<ol>
+<li>Browse to <a href="https://github.com/apps/pull">https://github.com/apps/pull</a> and click "install".</li>
+<li>Choose the organization (if applicable), then <strong>Only select repositories</strong>, and choose both your CIPP and CIPP-API. Click <strong>Install</strong></li>
+<li>Navigate to your <strong>CIPP</strong> repository on GitHub, then browse to the folder <code>.Github\Workflows</code>. Locate the file named <code>AZURE_STATIC_WEB_APPS_API_TOKEN_&lt;WORD&gt;_&lt;WORD&gt;_&lt;UUID&gt;.yml</code></li>
+<li>Open this file, then click the Edit icon in the rop right. Around the 7th line, there will be a code block like such:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pull_request:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  types: [opened, synchronize, reopened, closed]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  branches:
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    - main
+</code></pre></div>
+<ol>
+<li>Remove these lines, then click <strong>Commit changes...</strong> in the top right. Leave everything in the popup window as it is, with the radio button on <strong>Commit directly to the `main` branch</strong> selected. Click on <strong>Commit changes.</strong></li>
+<li>Wait for the next release of CIPP (Typically every other Friday, but there are some dev sprints that run a little longer). CIPP will warn you of an update, so log back into your GitHub and go to your CIPP repo.</li>
+<li>Click on <strong>Sync fork</strong>, then <strong>Update Branch</strong></li>
+<li>NOTE: DO NOT CHOOSE THE "Do you want to Discard # Commits"</li>
+<li>On your GitHub page, you will have a new Pull Request. Click on the "Run Workflow" button, then "Merge". Moving forward, your repo will automatically update</li>
+</ol>
+<h3 id="todo">Todo</h3>
+<ul>
+<li>Document the next two possible pathways:</li>
+<li>Setting up the SAM service account</li>
+<li>Configuring CIPP to function on your own tenant</li>
+<li>Grab screenshots of the autoupdate configuration.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Warning</p>
+<p>Please be smart and set up a separate CIPP tenant if you intend to manage your parent tenant.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/LoldenCode" target="_blank" rel="noopener">Alden Wilson</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/loldencode" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/alden-wilson-158414106/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      
+    
+  </body>
+</html>
